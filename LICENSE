@@ -1,47 +1,6 @@
-# Solar Power Phone Charging Station (Dual-Axis Tracker)
+MIT License
 
-A low-cost solar phone charging station with **dual-axis sun tracking**. LDR sensors drive two servos via **Arduino Uno** to keep the panel normal to the sun. Harvested energy charges **18650 Li-ion cells** and is regulated through a **DC-DC boost** to provide a stable 5 V USB (and optional wireless) output.
+Copyright (c) 2025 Mahalingam Thanuskanth
 
-![Prototype](docs/photos/prototype.jpg)
+Permission is hereby granted, free of charge, to any person obtaining a copy...
 
-## Features
-- Dual-axis tracking (azimuth + elevation) using 4× LDRs
-- Arduino-based control with adjustable deadband & speed
-- 18650 battery pack + BMS, 5 V USB output (boost converter)
-- Optional Qi wireless module
-- Campus-ready, portable, and eco-friendly
-
-## Hardware
-- Solar panel (~6–12 V, 5–10 W)
-- 4× LDR + 4× 10 kΩ resistors (voltage dividers)
-- 2× SG90/9g servos (or MG90S)
-- Arduino Uno (or Nano)
-- 18650 cells (with BMS), holder, wiring
-- DC-DC boost to 5 V USB (and/or wireless charger board)
-- Misc: mounts, frame, wires, switch, enclosure
-
-> **Power note:** Do **not** power servos from Arduino 5 V pin. Use a separate 5 V rail (e.g., the boost output or a buck), and **tie grounds together**.
-
-## Pin Map (default)
-- LDRs: A0=A_left, A1=A_right, A2=A_up, A3=A_down  
-- Servos: D9=Azimuth, D10=Elevation
-
-## Build & Upload
-1. Wire sensors/servos (see `hardware/wiring.md`).
-2. Open `firmware/SolarTrackerCharger.ino` in Arduino IDE.
-3. Select **Arduino Uno**, choose COM port, and upload.
-4. Calibrate: tweak `DEADBAND`, `STEP`, and servo limits, then test.
-
-## How Tracking Works
-LDR pairs (left–right, up–down) form two error signals. If the difference exceeds a deadband, the corresponding servo steps to reduce the error until the panel is centered on the sun.
-
-## Safety
-- Use a proper **BMS** for the 18650 pack.
-- Fuse the battery line.
-- Insulate all high-current joints; verify polarity before power-up.
-
-## License
-MIT — see `LICENSE`.
-
-## Acknowledgments
-Faculty of Technology, University of Colombo — IA1209 Design Project (Group 11).
