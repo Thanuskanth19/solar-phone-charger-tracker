@@ -3,7 +3,7 @@ Des# Solar Power Phone Charging Station (Dual-Axis Tracker)
 
 A low-cost solar phone charging station with **dual-axis sun tracking**. LDR sensors drive two servos via **Arduino Uno** to keep the panel normal to the sun. Harvested energy charges **18650 Li-ion cells** and is regulated through a **DC-DC boost** to provide a stable 5 V USB (and optional wireless) output.
 
-![Prototype](docs/photos/prototype.jpg)
+
 
 ## Features
 - Dual-axis tracking (azimuth + elevation) using 4× LDRs
