@@ -1,0 +1,11 @@
+Item,Qty,Notes
+Arduino Uno,1,Main controller
+LDR,4,Photoresistors for quad sensor
+10k Ohm resistor,4,Voltage dividers
+SG90/MG90S servo,2,Azimuth & elevation
+Solar panel (6–12V 5–10W),1,Depends on size/mount
+18650 cell,2-4,With holder & BMS
+DC-DC boost 5V USB,1,Phone charging output
+Qi wireless charger board (opt),1,Optional
+Wires/switches/fuse,1 set,Build & safety
+Frame/mounts,1 set,Wood/3D printed/metal
